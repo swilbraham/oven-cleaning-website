@@ -8,20 +8,20 @@
 }
 
 :root {
-  --primary: #1a5f7a;
-  --primary-dark: #134a5f;
-  --primary-light: #2980b9;
-  --accent: #e8792b;
-  --accent-dark: #d4691e;
-  --accent-light: #f5a623;
-  --dark: #1a1a2e;
-  --dark-light: #2d2d44;
+  --primary: #D32F2F;
+  --primary-dark: #B71C1C;
+  --primary-light: #EF5350;
+  --accent: #D32F2F;
+  --accent-dark: #B71C1C;
+  --accent-light: #FF8A80;
+  --dark: #212121;
+  --dark-light: #333333;
   --text: #333333;
   --text-light: #666666;
   --text-lighter: #999999;
   --bg: #ffffff;
-  --bg-light: #f7f9fc;
-  --bg-warm: #fef9f3;
+  --bg-light: #f8f8f8;
+  --bg-warm: #fef5f5;
   --border: #e2e8f0;
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -92,13 +92,13 @@ ul {
 .btn-primary {
   background: var(--accent);
   color: #fff;
-  box-shadow: 0 4px 15px rgba(232, 121, 43, 0.35);
+  box-shadow: 0 4px 15px rgba(211, 47, 47, 0.35);
 }
 
 .btn-primary:hover {
   background: var(--accent-dark);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(232, 121, 43, 0.45);
+  box-shadow: 0 6px 20px rgba(211, 47, 47, 0.45);
 }
 
 .btn-secondary {
@@ -194,6 +194,29 @@ ul {
   align-items: center;
   gap: 10px;
   z-index: 1001;
+}
+
+.logo-img {
+  width: 180px;
+  height: auto;
+  transition: var(--transition);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 8px 14px;
+}
+
+.header.scrolled .logo-img {
+  width: 160px;
+  background: transparent;
+  padding: 4px 0;
+}
+
+.footer-logo-img {
+  width: 170px;
+  height: auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 8px 14px;
 }
 
 .logo-icon {
@@ -343,7 +366,7 @@ ul {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(26, 26, 46, 0.85) 0%, rgba(26, 95, 122, 0.7) 100%);
+  background: linear-gradient(135deg, rgba(33, 33, 33, 0.88) 0%, rgba(140, 20, 20, 0.75) 100%);
   z-index: 2;
 }
 
@@ -461,7 +484,7 @@ ul {
 .hero-shapes .shape {
   position: absolute;
   border-radius: 50%;
-  background: rgba(232, 121, 43, 0.1);
+  background: rgba(211, 47, 47, 0.1);
 }
 
 .hero-shapes .shape-1 {
@@ -792,7 +815,7 @@ ul {
   align-items: center;
   justify-content: center;
   margin: 0 auto 24px;
-  box-shadow: 0 8px 25px rgba(26, 95, 122, 0.3);
+  box-shadow: 0 8px 25px rgba(211, 47, 47, 0.3);
 }
 
 .step-number i {
@@ -825,7 +848,7 @@ ul {
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  background: rgba(232, 121, 43, 0.08);
+  background: rgba(211, 47, 47, 0.08);
 }
 
 .areas .section-header h2 {
@@ -1162,7 +1185,7 @@ ul {
   outline: none;
   border-color: var(--primary);
   background: #fff;
-  box-shadow: 0 0 0 4px rgba(26, 95, 122, 0.1);
+  box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.1);
 }
 
 .form-group textarea {
