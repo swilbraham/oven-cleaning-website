@@ -311,7 +311,7 @@
 
         <div class="step-card fade-in">
           <div class="step-number">
-            <i class="fas fa-sparkles"></i>
+            <i class="fas fa-wand-magic-sparkles"></i>
           </div>
           <h3>4. Enjoy the Sparkle</h3>
           <p>Sit back and enjoy a spotless, hygienic oven that looks and works like new.</p>
@@ -616,6 +616,40 @@
                 </div>
               </div>
 
+            <!-- Quote Summary (inline) -->
+            <div class="quote-summary-inline">
+              <div class="quote-summary-card">
+                <h3><i class="fas fa-receipt" style="margin-right: 8px;"></i>Your Quote Summary</h3>
+
+                <div id="summary-empty" class="summary-empty">
+                  <i class="fas fa-hand-pointer"></i>
+                  Select items above to build your quote
+                </div>
+
+                <div id="summary-items" class="summary-items"></div>
+
+                <div id="summary-discount-row" class="summary-discount" style="display: none;">
+                  <span id="summary-discount-label">Discount</span>
+                  <span id="summary-discount">-£0</span>
+                </div>
+
+                <div class="summary-total">
+                  <span class="total-label">Estimated Total</span>
+                  <span class="total-price" id="summary-total-price">£0</span>
+                </div>
+
+                <p class="summary-note">* Final price confirmed after inspection</p>
+
+                <ul class="quote-benefits">
+                  <li><i class="fas fa-check"></i> No hidden charges</li>
+                  <li><i class="fas fa-check"></i> Free cancellation up to 24hrs</li>
+                  <li><i class="fas fa-check"></i> Multi-item discounts applied</li>
+                  <li><i class="fas fa-check"></i> Fully insured service</li>
+                  <li><i class="fas fa-check"></i> Eco-friendly products</li>
+                </ul>
+              </div>
+            </div>
+
             <!-- Contact Details for Quote -->
             <div class="quote-contact-fields">
               <h4><i class="fas fa-user"></i> Your Details</h4>
@@ -655,39 +689,6 @@
           </form>
         </div>
 
-        <!-- Right: Summary Sidebar -->
-        <div class="quote-summary fade-in-right">
-          <div class="quote-summary-card">
-            <h3><i class="fas fa-receipt" style="margin-right: 8px;"></i>Your Quote Summary</h3>
-
-            <div id="summary-empty" class="summary-empty">
-              <i class="fas fa-hand-pointer"></i>
-              Select items from the left to build your quote
-            </div>
-
-            <div id="summary-items" class="summary-items"></div>
-
-            <div id="summary-discount-row" class="summary-discount" style="display: none;">
-              <span id="summary-discount-label">Discount</span>
-              <span id="summary-discount">-£0</span>
-            </div>
-
-            <div class="summary-total">
-              <span class="total-label">Estimated Total</span>
-              <span class="total-price" id="summary-total-price">£0</span>
-            </div>
-
-            <p class="summary-note">* Final price confirmed after inspection</p>
-
-            <ul class="quote-benefits">
-              <li><i class="fas fa-check"></i> No hidden charges</li>
-              <li><i class="fas fa-check"></i> Free cancellation up to 24hrs</li>
-              <li><i class="fas fa-check"></i> Multi-item discounts applied</li>
-              <li><i class="fas fa-check"></i> Fully insured service</li>
-              <li><i class="fas fa-check"></i> Eco-friendly products</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </div>
   </section>
