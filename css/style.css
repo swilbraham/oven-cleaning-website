@@ -202,13 +202,8 @@ ul {
   transition: var(--transition);
 }
 
-.header .logo-img {
-  filter: brightness(0) invert(1);
-}
-
 .header.scrolled .logo-img {
   width: 160px;
-  filter: none;
 }
 
 .footer-logo-img {
