@@ -1798,6 +1798,18 @@ ul {
     display: block;
   }
 
+  .logo-img {
+    width: 130px;
+  }
+
+  .header .logo-img {
+    padding: 4px 8px;
+  }
+
+  .hero .container {
+    padding-top: 140px;
+  }
+
   .hero-content h1 {
     font-size: 2.2rem;
   }
@@ -1857,6 +1869,14 @@ ul {
 }
 
 @media (max-width: 480px) {
+  .logo-img {
+    width: 110px;
+  }
+
+  .hero .container {
+    padding-top: 130px;
+  }
+
   .hero-content h1 {
     font-size: 1.8rem;
   }
