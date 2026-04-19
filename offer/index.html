@@ -35,11 +35,9 @@
     padding: 0 32px;
     display: flex; align-items: center; justify-content: space-between; height: 68px;
   }
-  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-  .nav-logo-box { width: 44px; height: 44px; background: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
-  .nav-logo-box svg { width: 28px; height: 28px; }
-  .nav-logo-text { font-size: 15px; font-weight: 700; color: #fff; line-height: 1.2; }
-  .nav-logo-text span { display: block; font-size: 11px; font-weight: 400; color: var(--gray-text); }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo-img { height: 50px; width: auto; background: #fff; padding: 5px 10px; border-radius: 10px; display: block; }
+  .nav-logo-text { font-size: 11px; font-weight: 400; color: var(--gray-text); line-height: 1.2; }
   .nav-right { display: flex; align-items: center; gap: 14px; }
   .nav-phone { display: flex; align-items: center; gap: 7px; color: #fff; font-weight: 600; font-size: 15px; text-decoration: none; }
   .nav-phone svg { color: var(--red); }
@@ -129,9 +127,8 @@
   .testi-loc { font-size: 12px; color: #6b7280; }
 
   footer { background: #0f0303; border-top: 1px solid rgba(229,53,53,0.15); padding: 36px 28px; text-align: center; }
-  .footer-logo { font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 12px; display: flex; align-items: center; justify-content: center; gap: 10px; }
-  .footer-logo-box { width: 32px; height: 32px; background: #fff; border-radius: 7px; display: flex; align-items: center; justify-content: center; }
-  .footer-logo-box svg { width: 20px; height: 20px; }
+  .footer-logo { margin-bottom: 12px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+  .footer-logo-img { height: 60px; width: auto; background: #fff; padding: 6px 12px; border-radius: 8px; display: block; }
   .footer-links { display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; margin-bottom: 14px; }
   .footer-links a { font-size: 13px; color: var(--gray-text); text-decoration: none; }
   .footer-links a:hover { color: var(--red); }
@@ -155,10 +152,8 @@
 
 <nav>
   <a href="https://www.theovencleaner.co.uk" class="nav-logo">
-    <div class="nav-logo-box">
-      <svg viewBox="0 0 28 28" fill="none"><rect x="3" y="6" width="22" height="16" rx="2" fill="#dc2626"/><rect x="5" y="8" width="18" height="12" rx="1" fill="#fff" opacity=".2"/><circle cx="9" cy="20" r="1.5" fill="#fff"/><circle cx="14" cy="20" r="1.5" fill="#fff"/><circle cx="19" cy="20" r="1.5" fill="#fff"/></svg>
-    </div>
-    <div class="nav-logo-text">The Oven Cleaner<span>Wirral &middot; Liverpool &middot; Chester</span></div>
+    <img src="/Oven Cleaning Co Logo.png" alt="The Oven Cleaner" class="nav-logo-img">
+    <div class="nav-logo-text">Wirral &middot; Liverpool &middot; Chester</div>
   </a>
   <div class="nav-right">
     <a href="tel:+447533905509" class="nav-phone">
@@ -341,8 +336,7 @@
 <footer>
   <div class="container">
     <div class="footer-logo">
-      <div class="footer-logo-box"><svg viewBox="0 0 28 28" fill="none"><rect x="3" y="6" width="22" height="16" rx="2" fill="#dc2626"/><rect x="5" y="8" width="18" height="12" rx="1" fill="#fff" opacity=".2"/><circle cx="9" cy="20" r="1.5" fill="#fff"/><circle cx="14" cy="20" r="1.5" fill="#fff"/><circle cx="19" cy="20" r="1.5" fill="#fff"/></svg></div>
-      The Oven Cleaner
+      <img src="/Oven Cleaning Co Logo.png" alt="The Oven Cleaner" class="footer-logo-img">
     </div>
     <div class="footer-links">
       <a href="https://www.theovencleaner.co.uk">Main website</a>
@@ -352,7 +346,7 @@
       <a href="tel:+447533905509">+44 7533 905509</a>
     </div>
     <p class="footer-copy">&copy; 2026 The Oven Cleaner. All rights reserved.</p>
-    <p class="fine-print">Today-only pricing valid on bookings made on Sunday 19 April 2026 only. Quote code SUNDAY40 when booking. Appointments to be completed no later than 31 May 2026, subject to availability. Offer cannot be combined with any other promotion or discount. The Oven Cleaner Ltd. Serving the Wirral, Liverpool &amp; Chester.</p>
+    <p class="fine-print">Today-only pricing valid on bookings made on Sunday 19 April 2026 only. Quote code SUNDAY40 when booking. Appointments to be completed no later than 31 May 2026, subject to availability. Offer cannot be combined with any other promotion or discount. Serving the Wirral, Liverpool &amp; Chester.</p>
   </div>
 </footer>
 
