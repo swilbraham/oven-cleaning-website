@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Super Sunday Offer | The Oven Cleaner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg-dark: #1a0505;
+    --bg-hero: #2d0a0a;
+    --bg-section: #3d0f0f;
+    --red: #e53535;
+    --red-btn: #dc2626;
+    --red-btn-h: #ef4444;
+    --red-light: rgba(229,53,53,0.15);
+    --red-border: rgba(229,53,53,0.35);
+    --white: #ffffff;
+    --gray-text: rgba(255,255,255,0.65);
+    --gray-muted: rgba(255,255,255,0.4);
+    --radius: 14px;
+    --radius-sm: 8px;
+    --radius-pill: 50px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(--white); line-height: 1.6; font-size: 16px; }
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(26,5,5,0.97);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(229,53,53,0.15);
+    padding: 0 32px;
+    display: flex; align-items: center; justify-content: space-between; height: 68px;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo-box { width: 44px; height: 44px; background: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+  .nav-logo-box svg { width: 28px; height: 28px; }
+  .nav-logo-text { font-size: 15px; font-weight: 700; color: #fff; line-height: 1.2; }
+  .nav-logo-text span { display: block; font-size: 11px; font-weight: 400; color: var(--gray-text); }
+  .nav-right { display: flex; align-items: center; gap: 14px; }
+  .nav-phone { display: flex; align-items: center; gap: 7px; color: #fff; font-weight: 600; font-size: 15px; text-decoration: none; }
+  .nav-phone svg { color: var(--red); }
+  .nav-cta { background: var(--red-btn); color: #fff; font-weight: 700; font-size: 14px; padding: 10px 22px; border-radius: var(--radius-pill); text-decoration: none; transition: background 0.2s; }
+  .nav-cta:hover { background: var(--red-btn-h); }
+
+  .alert-bar { background: rgba(220,38,38,0.18); border-bottom: 1px solid rgba(220,38,38,0.3); padding: 11px 24px; text-align: center; font-size: 13px; color: #fca5a5; display: flex; align-items: center; justify-content: center; gap: 9px; }
+  .alert-bar strong { color: #fff; }
+  .alert-dot { width: 8px; height: 8px; border-radius: 50%; background: #ff3b3b; animation: blink 1.4s ease-in-out infinite; flex-shrink: 0; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  .hero { background: linear-gradient(160deg, #2d0a0a 0%, #1a0505 60%, #3d0f0f 100%); padding: 64px 32px 56px; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(229,53,53,0.12) 0%, transparent 65%); pointer-events: none; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(229,53,53,0.15); border: 1px solid rgba(229,53,53,0.4); color: #ff8080; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 7px 18px; border-radius: var(--radius-pill); margin-bottom: 28px; }
+  .hero h1 { font-size: clamp(30px, 5.5vw, 52px); font-weight: 800; line-height: 1.12; color: #fff; margin-bottom: 18px; }
+  .hero h1 em { color: var(--red); font-style: normal; }
+  .hero-sub { font-size: 17px; color: var(--gray-text); max-width: 540px; margin: 0 auto 36px; line-height: 1.65; }
+
+  .countdown-wrap { display: inline-flex; align-items: center; gap: 6px; background: rgba(0,0,0,0.3); border: 1px solid var(--red-border); border-radius: var(--radius); padding: 18px 28px; margin-bottom: 14px; }
+  .cd-unit { text-align: center; min-width: 62px; }
+  .cd-num { display: block; font-size: 36px; font-weight: 800; color: var(--red); line-height: 1; font-variant-numeric: tabular-nums; }
+  .cd-sep { font-size: 30px; font-weight: 800; color: rgba(229,53,53,0.4); line-height: 1; padding-bottom: 14px; }
+  .cd-label { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gray-muted); margin-top: 5px; }
+  .hero-deadline { font-size: 13px; color: var(--gray-muted); }
+  .hero-deadline strong { color: #86efac; }
+
+  .container { max-width: 920px; margin: 0 auto; padding: 0 28px; }
+  section { padding: 60px 0; }
+  .section-label { font-size: 12px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+  .section-title { font-size: clamp(24px, 4vw, 34px); font-weight: 800; color: #fff; margin-bottom: 12px; line-height: 1.2; }
+  .section-sub { font-size: 16px; color: var(--gray-text); max-width: 500px; line-height: 1.65; margin-bottom: 40px; }
+  .section-divider { border: none; border-top: 1px solid rgba(229,53,53,0.12); }
+
+  .packages { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+  .pkg-card { background: #fff; border: 1px solid #e5e7eb; border-radius: var(--radius); overflow: hidden; color: #111; transition: transform 0.2s, box-shadow 0.2s; }
+  .pkg-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(229,53,53,0.2); }
+  .pkg-card-top { background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%); padding: 24px 24px 20px; position: relative; }
+  .pkg-card.featured .pkg-card-top { background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); }
+  .featured-badge { position: absolute; top: 16px; right: 16px; background: #fff; color: #dc2626; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: var(--radius-pill); }
+  .pkg-name { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+  .pkg-desc { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.5; }
+  .pkg-card-body { padding: 24px; }
+  .pkg-price-row { display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px; }
+  .pkg-was { font-size: 16px; color: #9ca3af; text-decoration: line-through; }
+  .pkg-now { font-size: 48px; font-weight: 800; color: #111; line-height: 1; }
+  .pkg-now sup { font-size: 24px; vertical-align: top; margin-top: 8px; }
+  .pkg-save { display: inline-block; background: #dcfce7; color: #166534; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: var(--radius-pill); margin-bottom: 20px; }
+  .pkg-divider { border: none; border-top: 1px solid #f3f4f6; margin-bottom: 16px; }
+  .pkg-items { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .pkg-items li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #374151; line-height: 1.4; }
+  .tick { width: 20px; height: 20px; border-radius: 50%; background: #fee2e2; flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+  .tick svg { width: 11px; height: 11px; }
+  .pkg-cta { display: block; width: 100%; margin-top: 22px; padding: 14px; border-radius: var(--radius-sm); font-size: 15px; font-weight: 700; text-align: center; text-decoration: none; background: #dc2626; color: #fff; transition: background 0.2s; }
+  .pkg-cta:hover { background: #ef4444; }
+
+  .includes-section { background: linear-gradient(160deg, #3d0f0f 0%, #2d0a0a 100%); padding: 60px 0; }
+  .includes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .include-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(229,53,53,0.2); border-radius: var(--radius); padding: 22px; display: flex; gap: 14px; align-items: flex-start; transition: border-color 0.2s; }
+  .include-card:hover { border-color: rgba(229,53,53,0.45); }
+  .include-icon { width: 42px; height: 42px; border-radius: 10px; background: rgba(229,53,53,0.15); border: 1px solid rgba(229,53,53,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .include-icon svg { width: 20px; height: 20px; stroke: var(--red); fill: none; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+  .include-title { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 3px; }
+  .include-sub { font-size: 13px; color: var(--gray-text); line-height: 1.45; }
+
+  .code-row { background: rgba(0,0,0,0.25); border: 2px dashed rgba(229,53,53,0.4); border-radius: var(--radius-sm); padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 22px; }
+  .code-label { font-size: 13px; color: var(--gray-text); margin-bottom: 2px; }
+  .code-val { font-size: 26px; font-weight: 800; color: var(--red); letter-spacing: 4px; font-family: 'Courier New', monospace; }
+  .code-copy { background: var(--red-light); border: 1px solid var(--red-border); color: #ff8080; font-size: 13px; font-weight: 600; padding: 8px 18px; border-radius: 6px; cursor: pointer; transition: background 0.2s; font-family: inherit; }
+  .code-copy:hover { background: rgba(229,53,53,0.25); }
+
+  .cta-strip { background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); border-radius: var(--radius); padding: 36px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+  .cta-strip h3 { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+  .cta-strip p { font-size: 14px; color: rgba(255,255,255,0.8); }
+  .cta-strip-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-white { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #dc2626; font-weight: 800; font-size: 16px; padding: 14px 28px; border-radius: var(--radius-pill); text-decoration: none; transition: background 0.2s; white-space: nowrap; }
+  .btn-white:hover { background: #f3f4f6; }
+  .btn-outline-white { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: #fff; font-weight: 600; font-size: 15px; padding: 14px 24px; border-radius: var(--radius-pill); text-decoration: none; border: 2px solid rgba(255,255,255,0.5); transition: border-color 0.2s; white-space: nowrap; }
+  .btn-outline-white:hover { border-color: #fff; }
+
+  .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+  .testi-card { background: #fff; border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 26px; color: #111; }
+  .testi-stars { color: #dc2626; font-size: 15px; margin-bottom: 14px; }
+  .testi-text { font-size: 14px; color: #4b5563; line-height: 1.7; margin-bottom: 18px; font-style: italic; }
+  .testi-author { display: flex; align-items: center; gap: 12px; }
+  .testi-avatar { width: 40px; height: 40px; border-radius: 50%; background: #fee2e2; border: 2px solid #dc2626; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: #dc2626; flex-shrink: 0; }
+  .testi-name { font-size: 14px; font-weight: 700; color: #111; }
+  .testi-loc { font-size: 12px; color: #6b7280; }
+
+  footer { background: #0f0303; border-top: 1px solid rgba(229,53,53,0.15); padding: 36px 28px; text-align: center; }
+  .footer-logo { font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 12px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+  .footer-logo-box { width: 32px; height: 32px; background: #fff; border-radius: 7px; display: flex; align-items: center; justify-content: center; }
+  .footer-logo-box svg { width: 20px; height: 20px; }
+  .footer-links { display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; margin-bottom: 14px; }
+  .footer-links a { font-size: 13px; color: var(--gray-text); text-decoration: none; }
+  .footer-links a:hover { color: var(--red); }
+  .footer-copy { font-size: 12px; color: var(--gray-muted); margin-bottom: 18px; }
+  .fine-print { font-size: 12px; color: rgba(255,255,255,0.28); line-height: 1.7; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.06); max-width: 760px; margin: 0 auto; }
+
+  .sticky-call { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #dc2626; padding: 15px 20px; z-index: 200; text-align: center; }
+  .sticky-call a { color: #fff; font-weight: 800; font-size: 16px; text-decoration: none; }
+  @media (max-width: 640px) {
+    .sticky-call { display: block; }
+    body { padding-bottom: 58px; }
+    .nav-cta { display: none; }
+    nav { padding: 0 16px; }
+    .hero { padding: 44px 16px 40px; }
+    .container { padding: 0 16px; }
+    .cta-strip { padding: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://www.theovencleaner.co.uk" class="nav-logo">
+    <div class="nav-logo-box">
+      <svg viewBox="0 0 28 28" fill="none"><rect x="3" y="6" width="22" height="16" rx="2" fill="#dc2626"/><rect x="5" y="8" width="18" height="12" rx="1" fill="#fff" opacity=".2"/><circle cx="9" cy="20" r="1.5" fill="#fff"/><circle cx="14" cy="20" r="1.5" fill="#fff"/><circle cx="19" cy="20" r="1.5" fill="#fff"/></svg>
+    </div>
+    <div class="nav-logo-text">The Oven Cleaner<span>Wirral &middot; Liverpool &middot; Chester</span></div>
+  </a>
+  <div class="nav-right">
+    <a href="tel:+447533905509" class="nav-phone">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.01 2.38 2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14z"/></svg>
+      +44 7533 905509
+    </a>
+    <a href="tel:+447533905509" class="nav-cta">Free Quote</a>
+  </div>
+</nav>
+
+<div class="alert-bar">
+  <span class="alert-dot"></span>
+  <strong>Today only &mdash; Sunday 19 April 2026.</strong>&nbsp; Book now, appointment completed by 31 May 2026. Offer expires at midnight.
+</div>
+
+<div class="hero">
+  <div class="hero-badge"><span class="alert-dot"></span> Super Sunday Special &mdash; One Day Only</div>
+  <h1>Professional Oven Cleaning<br><em>at Unbeatable Prices</em></h1>
+  <p class="hero-sub">Book today and save big. We come to you across the Wirral, Liverpool &amp; Chester &mdash; eco-safe products, outstanding results, guaranteed.</p>
+  <div class="countdown-wrap">
+    <div class="cd-unit"><span class="cd-num" id="cd-h">00</span><span class="cd-label">hours</span></div>
+    <span class="cd-sep">:</span>
+    <div class="cd-unit"><span class="cd-num" id="cd-m">00</span><span class="cd-label">mins</span></div>
+    <span class="cd-sep">:</span>
+    <div class="cd-unit"><span class="cd-num" id="cd-s">00</span><span class="cd-label">secs</span></div>
+  </div>
+  <p class="hero-deadline">Offer closes midnight tonight &bull; <strong>Appointments available until 31 May 2026</strong></p>
+</div>
+
+<section>
+  <div class="container">
+    <p class="section-label">Today's prices</p>
+    <h2 class="section-title">Choose Your Package</h2>
+    <p class="section-sub">Exclusive Super Sunday prices &mdash; book today and we'll come to you at a time that suits.</p>
+    <div class="packages">
+      <div class="pkg-card">
+        <div class="pkg-card-top">
+          <p class="pkg-name">Single Oven</p>
+          <p class="pkg-desc">Full interior deep clean, racks, shelves and door glass</p>
+        </div>
+        <div class="pkg-card-body">
+          <div class="pkg-price-row"><span class="pkg-was">Usually &pound;55</span></div>
+          <div class="pkg-now"><sup>&pound;</sup>39</div>
+          <span class="pkg-save">&#10003; Save &pound;16 &mdash; today only</span>
+          <hr class="pkg-divider">
+          <ul class="pkg-items">
+            <li><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg></span>Full oven interior clean</li>
+            <li><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg></span>Racks &amp; shelves removed &amp; cleaned</li>
+            <li><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg></span>Door glass inside &amp; out</li>
+            <li><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg></span>Eco-safe, fume-free products</li>
+          </ul>
+          <a href="tel:+447533905509" class="pkg-cta">Call to Book &rarr;</a>
+        </div>
+      </div>
+      <div class="pkg-card featured">
+        <div class="pkg-card-top">
+          <span class="featured-badge">&#9733; Best Value</span>
+          <p class="pkg-name">Oven, Hob &amp; Extractor</p>
+          <p class="pkg-desc">Complete kitchen clean &mdash; oven, hob burners and extractor filter</p>
+        </div>
+        <div class="pkg-card-body">
+          <div class="pkg-price-row"><span class="pkg-was">Usually &pound;99</span></div>
+          <div class="pkg-now"><sup>&pound;</sup>69</div>
+          <span class="pkg-save">&#10003; Save &pound;30 &mdash; today only</span>
+          <hr class="pkg-divider">
+          <ul class="pkg-items">
+            <li><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg></span>Full oven interior &amp; door glass</li>
+            <li><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg></span>Hob burners &amp; pan stands</li>
+            <li><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg></span>Extractor filters &amp; surround</li>
+            <li><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg></span>All racks, trays &amp; shelves</li>
+            <li><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg></span>Eco-safe, fume-free products</li>
+          </ul>
+          <a href="tel:+447533905509" class="pkg-cta">Call to Book &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<div class="includes-section">
+  <div class="container">
+    <p class="section-label">Every booking</p>
+    <h2 class="section-title">Everything Included as Standard</h2>
+    <p class="section-sub">No hidden charges. No nasty surprises. Just outstanding results, every time.</p>
+    <div class="includes-grid">
+      <div class="include-card">
+        <div class="include-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+        <div><p class="include-title">Flexible appointment</p><p class="include-sub">Any weekday before 31 May 2026, to suit you</p></div>
+      </div>
+      <div class="include-card">
+        <div class="include-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div><p class="include-title">Satisfaction guarantee</p><p class="include-sub">Not happy? We return and re-clean free of charge</p></div>
+      </div>
+      <div class="include-card">
+        <div class="include-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div><p class="include-title">Fully insured</p><p class="include-sub">&pound;2m public liability. DBS checked technicians</p></div>
+      </div>
+      <div class="include-card">
+        <div class="include-icon"><svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+        <div><p class="include-title">Eco-safe products</p><p class="include-sub">No caustic fumes &mdash; safe for families &amp; pets</p></div>
+      </div>
+      <div class="include-card">
+        <div class="include-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <div><p class="include-title">No hidden charges</p><p class="include-sub">Price agreed upfront. What we quote is what you pay</p></div>
+      </div>
+      <div class="include-card">
+        <div class="include-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <div><p class="include-title">Local &amp; family-run</p><p class="include-sub">Proudly serving Wirral, Liverpool &amp; Chester since 2015</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <p class="section-label">How to claim</p>
+    <h2 class="section-title">Secure Your Slot Today</h2>
+    <p class="section-sub">Call and quote the code below to get your Super Sunday price &mdash; lines open until 8pm.</p>
+    <div class="code-row">
+      <div>
+        <p class="code-label">Booking code</p>
+        <p class="code-val">SUNDAY40</p>
+      </div>
+      <button class="code-copy" onclick="copyCode()">Copy code</button>
+    </div>
+    <div class="cta-strip">
+      <div>
+        <h3>Ready to book? Call us now</h3>
+        <p>Lines open until 8pm &bull; Quote <strong>SUNDAY40</strong> when you call</p>
+      </div>
+      <div class="cta-strip-actions">
+        <a href="tel:+447533905509" class="btn-white">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.01 2.38 2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14z"/></svg>
+          +44 7533 905509
+        </a>
+        <a href="https://www.theovencleaner.co.uk/#contact" class="btn-outline-white">Send a message</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<section>
+  <div class="container">
+    <p class="section-label">Our customers</p>
+    <h2 class="section-title">What People Are Saying</h2>
+    <p class="section-sub">Hundreds of happy customers across Merseyside and Cheshire.</p>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testi-text">"Absolutely brilliant job! My oven looks brand new and the technician was friendly, professional and tidy. I couldn't believe the difference. Will definitely use again."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">SJ</div>
+          <div><p class="testi-name">Sarah J.</p><p class="testi-loc">Heswall, Wirral</p></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testi-text">"Booked through the Super Sunday offer &mdash; incredible value. The whole kitchen looks amazing. Hob and extractor spotless. Could not recommend more highly."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">LP</div>
+          <div><p class="testi-name">Linda P.</p><p class="testi-loc">Woolton, Liverpool</p></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testi-text">"Reliable, thorough and great value. They work around our schedule and the results are always outstanding. We use them every month for our restaurant."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">MT</div>
+          <div><p class="testi-name">Mark T.</p><p class="testi-loc">Restaurant Owner, Chester</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-logo">
+      <div class="footer-logo-box"><svg viewBox="0 0 28 28" fill="none"><rect x="3" y="6" width="22" height="16" rx="2" fill="#dc2626"/><rect x="5" y="8" width="18" height="12" rx="1" fill="#fff" opacity=".2"/><circle cx="9" cy="20" r="1.5" fill="#fff"/><circle cx="14" cy="20" r="1.5" fill="#fff"/><circle cx="19" cy="20" r="1.5" fill="#fff"/></svg></div>
+      The Oven Cleaner
+    </div>
+    <div class="footer-links">
+      <a href="https://www.theovencleaner.co.uk">Main website</a>
+      <a href="https://www.theovencleaner.co.uk/#services">Services</a>
+      <a href="https://www.theovencleaner.co.uk/#areas">Areas covered</a>
+      <a href="mailto:info@theovencleaner.co.uk">info@theovencleaner.co.uk</a>
+      <a href="tel:+447533905509">+44 7533 905509</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 The Oven Cleaner. All rights reserved.</p>
+    <p class="fine-print">Today-only pricing valid on bookings made on Sunday 19 April 2026 only. Quote code SUNDAY40 when booking. Appointments to be completed no later than 31 May 2026, subject to availability. Offer cannot be combined with any other promotion or discount. The Oven Cleaner Ltd. Serving the Wirral, Liverpool &amp; Chester.</p>
+  </div>
+</footer>
+
+<div class="sticky-call"><a href="tel:+447533905509">&#128222; Call Now &mdash; +44 7533 905509</a></div>
+
+<script>
+function tick() {
+  var now = new Date(), end = new Date(now);
+  end.setHours(23,59,59,999);
+  var d = Math.max(0, end - now);
+  document.getElementById('cd-h').textContent = String(Math.floor(d/3600000)).padStart(2,'0');
+  document.getElementById('cd-m').textContent = String(Math.floor((d%3600000)/60000)).padStart(2,'0');
+  document.getElementById('cd-s').textContent = String(Math.floor((d%60000)/1000)).padStart(2,'0');
+}
+tick(); setInterval(tick,1000);
+function copyCode() {
+  navigator.clipboard.writeText('SUNDAY40').then(function(){
+    var b = document.querySelector('.code-copy');
+    b.textContent = 'Copied!';
+    setTimeout(function(){ b.textContent = 'Copy code'; }, 2000);
+  });
+}
+</script>
+</body>
+</html>
