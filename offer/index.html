@@ -141,6 +141,14 @@
   .testi-name { font-size: 14px; font-weight: 700; color: #111; }
   .testi-loc { font-size: 12px; color: #6b7280; }
 
+  .ba-section { padding: 40px 0 20px; }
+  .ba-wrap { position: relative; border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(229,53,53,0.25); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+  .ba-wrap img { display: block; width: 100%; height: auto; }
+  .ba-labels { position: absolute; top: 14px; left: 0; right: 0; display: flex; justify-content: space-around; pointer-events: none; }
+  .ba-label { background: rgba(0,0,0,0.75); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 16px; border-radius: var(--radius-pill); border: 1px solid rgba(255,255,255,0.2); }
+  .ba-label.after { background: rgba(220,38,38,0.9); }
+  .ba-caption { text-align: center; font-size: 13px; color: var(--gray-muted); margin-top: 14px; font-style: italic; }
+
   footer { background: #0f0303; border-top: 1px solid rgba(229,53,53,0.15); padding: 36px 28px; text-align: center; }
   .footer-logo { margin-bottom: 12px; display: flex; align-items: center; justify-content: center; gap: 10px; }
   .footer-logo-img { height: 60px; width: auto; background: #fff; padding: 6px 12px; border-radius: 8px; display: block; }
@@ -375,6 +383,24 @@
 
 <hr class="section-divider">
 
+<section class="ba-section">
+  <div class="container">
+    <p class="section-label">Real results</p>
+    <h2 class="section-title">See The Difference</h2>
+    <p class="section-sub">An actual customer's oven &mdash; before and after our deep clean.</p>
+    <div class="ba-wrap">
+      <div class="ba-labels">
+        <span class="ba-label">Before</span>
+        <span class="ba-label after">After</span>
+      </div>
+      <img src="/before-after.jpg" alt="Oven before and after professional cleaning">
+    </div>
+    <p class="ba-caption">No harsh chemicals &mdash; just outstanding, lasting results.</p>
+  </div>
+</section>
+
+<hr class="section-divider">
+
 <section>
   <div class="container">
     <p class="section-label">Our customers</p>
@@ -395,14 +421,6 @@
         <div class="testi-author">
           <div class="testi-avatar">LP</div>
           <div><p class="testi-name">Linda P.</p><p class="testi-loc">Woolton, Liverpool</p></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testi-text">"Reliable, thorough and great value. They work around our schedule and the results are always outstanding. We use them every month for our restaurant."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">MT</div>
-          <div><p class="testi-name">Mark T.</p><p class="testi-loc">Restaurant Owner, Chester</p></div>
         </div>
       </div>
     </div>
