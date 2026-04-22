@@ -56,11 +56,12 @@
   .hero h1 em { color: var(--red); font-style: normal; }
   .hero-sub { font-size: 17px; color: var(--gray-text); max-width: 540px; margin: 0 auto 36px; line-height: 1.65; }
 
-  .countdown-wrap { display: inline-flex; align-items: center; gap: 6px; background: rgba(0,0,0,0.3); border: 1px solid var(--red-border); border-radius: var(--radius); padding: 18px 28px; margin-bottom: 14px; }
-  .cd-unit { text-align: center; min-width: 62px; }
-  .cd-num { display: block; font-size: 36px; font-weight: 800; color: var(--red); line-height: 1; font-variant-numeric: tabular-nums; }
-  .cd-sep { font-size: 30px; font-weight: 800; color: rgba(229,53,53,0.4); line-height: 1; padding-bottom: 14px; }
-  .cd-label { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gray-muted); margin-top: 5px; }
+  .hero-actions { display: inline-flex; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: center; margin-bottom: 22px; }
+  .hero-btn-primary { background: var(--red-btn); color: #fff; font-weight: 700; font-size: 15px; padding: 14px 28px; border-radius: var(--radius-pill); text-decoration: none; transition: background 0.2s, transform 0.2s; box-shadow: 0 8px 22px rgba(220,38,38,0.35); }
+  .hero-btn-primary:hover { background: var(--red-btn-h); transform: translateY(-2px); }
+  .hero-btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); color: #fff; font-weight: 600; font-size: 15px; padding: 13px 22px; border-radius: var(--radius-pill); text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: border-color 0.2s; }
+  .hero-btn-secondary:hover { border-color: rgba(255,255,255,0.5); }
+  .hero-btn-secondary svg { color: var(--red); }
   .hero-deadline { font-size: 13px; color: var(--gray-muted); }
   .hero-deadline strong { color: #86efac; }
 
@@ -149,6 +150,9 @@
   .ba-label.after { background: rgba(220,38,38,0.9); }
   .ba-caption { text-align: center; font-size: 13px; color: var(--gray-muted); margin-top: 14px; font-style: italic; }
 
+  .booking-section { background: linear-gradient(160deg, #3d0f0f 0%, #2d0a0a 100%); padding: 70px 0 80px; }
+  .booking-section .section-sub a:hover { color: var(--red) !important; }
+
   footer { background: #0f0303; border-top: 1px solid rgba(229,53,53,0.15); padding: 36px 28px; text-align: center; }
   .footer-logo { margin-bottom: 12px; display: flex; align-items: center; justify-content: center; gap: 10px; }
   .footer-logo-img { height: 60px; width: auto; background: #fff; padding: 6px 12px; border-radius: 8px; display: block; }
@@ -196,17 +200,17 @@
   <div class="hero-badge"><span class="alert-dot"></span> Limited Offer &mdash; Exclusive Savings</div>
   <h1>Professional Oven Cleaning<br><em>at Unbeatable Prices</em></h1>
   <p class="hero-sub">Book today and save big. We come to you across the Wirral, Liverpool &amp; Chester &mdash; eco-safe products, outstanding results, guaranteed.</p>
-  <div class="countdown-wrap">
-    <div class="cd-unit"><span class="cd-num" id="cd-h">00</span><span class="cd-label">hours</span></div>
-    <span class="cd-sep">:</span>
-    <div class="cd-unit"><span class="cd-num" id="cd-m">00</span><span class="cd-label">mins</span></div>
-    <span class="cd-sep">:</span>
-    <div class="cd-unit"><span class="cd-num" id="cd-s">00</span><span class="cd-label">secs</span></div>
+  <div class="hero-actions">
+    <a href="#packages" class="hero-btn-primary">See the offers</a>
+    <a href="tel:+447533905509" class="hero-btn-secondary">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.01 2.38 2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14z"/></svg>
+      +44 7533 905509
+    </a>
   </div>
   <p class="hero-deadline">Limited availability &bull; <strong>Appointments available until 31 May 2026</strong></p>
 </div>
 
-<section>
+<section id="packages">
   <div class="container">
     <p class="section-label">Today's prices</p>
     <h2 class="section-title">Choose Your Package</h2>
@@ -256,7 +260,21 @@
   </div>
 </section>
 
-<hr class="section-divider">
+<section class="ba-section">
+  <div class="container">
+    <p class="section-label">Real results</p>
+    <h2 class="section-title">See The Difference</h2>
+    <p class="section-sub">An actual customer's oven &mdash; before and after our deep clean.</p>
+    <div class="ba-wrap">
+      <div class="ba-labels">
+        <span class="ba-label">Before</span>
+        <span class="ba-label after">After</span>
+      </div>
+      <img src="/before-after.jpg" alt="Oven before and after professional cleaning">
+    </div>
+    <p class="ba-caption">No harsh chemicals &mdash; just outstanding, lasting results.</p>
+  </div>
+</section>
 
 <div class="includes-section">
   <div class="container">
@@ -294,16 +312,35 @@
 
 <section>
   <div class="container">
-    <p class="section-label">How to claim</p>
-    <h2 class="section-title">Secure Your Slot Today</h2>
-    <p class="section-sub">Fill in the form below or call and quote the code to claim your limited offer price &mdash; lines open until 8pm.</p>
-    <div class="code-row">
-      <div>
-        <p class="code-label">Booking code</p>
-        <p class="code-val">LIMITED40</p>
+    <p class="section-label">Our customers</p>
+    <h2 class="section-title">What People Are Saying</h2>
+    <p class="section-sub">Hundreds of happy customers across Merseyside and Cheshire.</p>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testi-text">"Absolutely brilliant job! My oven looks brand new and the technician was friendly, professional and tidy. I couldn't believe the difference. Will definitely use again."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">SJ</div>
+          <div><p class="testi-name">Sarah J.</p><p class="testi-loc">Heswall, Wirral</p></div>
+        </div>
       </div>
-      <button class="code-copy" onclick="copyCode()">Copy code</button>
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testi-text">"Booked through the limited offer &mdash; incredible value. The whole kitchen looks amazing. Hob and extractor spotless. Could not recommend more highly."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">LP</div>
+          <div><p class="testi-name">Linda P.</p><p class="testi-loc">Woolton, Liverpool</p></div>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
+
+<section class="booking-section">
+  <div class="container">
+    <p class="section-label">Ready to book?</p>
+    <h2 class="section-title">Claim Your Limited Offer</h2>
+    <p class="section-sub">Fill in the form and we'll confirm your appointment within the hour. Prefer to call? Quote <strong style="color:var(--red);">LIMITED40</strong> on <a href="tel:+447533905509" style="color:#fff;font-weight:600;">+44 7533 905509</a>.</p>
 
     <div class="booking-form-wrap" id="booking-form">
       <p class="booking-form-title">Book online &mdash; we'll be in touch</p>
@@ -365,65 +402,6 @@
       </form>
     </div>
 
-    <div class="cta-strip">
-      <div>
-        <h3>Ready to book? Call us now</h3>
-        <p>Lines open until 8pm &bull; Quote <strong>LIMITED40</strong> when you call</p>
-      </div>
-      <div class="cta-strip-actions">
-        <a href="tel:+447533905509" class="btn-white">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.01 2.38 2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14z"/></svg>
-          +44 7533 905509
-        </a>
-        <a href="https://www.theovencleaner.co.uk/#contact" class="btn-outline-white">Send a message</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="section-divider">
-
-<section class="ba-section">
-  <div class="container">
-    <p class="section-label">Real results</p>
-    <h2 class="section-title">See The Difference</h2>
-    <p class="section-sub">An actual customer's oven &mdash; before and after our deep clean.</p>
-    <div class="ba-wrap">
-      <div class="ba-labels">
-        <span class="ba-label">Before</span>
-        <span class="ba-label after">After</span>
-      </div>
-      <img src="/before-after.jpg" alt="Oven before and after professional cleaning">
-    </div>
-    <p class="ba-caption">No harsh chemicals &mdash; just outstanding, lasting results.</p>
-  </div>
-</section>
-
-<hr class="section-divider">
-
-<section>
-  <div class="container">
-    <p class="section-label">Our customers</p>
-    <h2 class="section-title">What People Are Saying</h2>
-    <p class="section-sub">Hundreds of happy customers across Merseyside and Cheshire.</p>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testi-text">"Absolutely brilliant job! My oven looks brand new and the technician was friendly, professional and tidy. I couldn't believe the difference. Will definitely use again."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">SJ</div>
-          <div><p class="testi-name">Sarah J.</p><p class="testi-loc">Heswall, Wirral</p></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testi-text">"Booked through the limited offer &mdash; incredible value. The whole kitchen looks amazing. Hob and extractor spotless. Could not recommend more highly."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">LP</div>
-          <div><p class="testi-name">Linda P.</p><p class="testi-loc">Woolton, Liverpool</p></div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -447,15 +425,6 @@
 <div class="sticky-call"><a href="#booking-form">&#128293; Claim Offer Now</a></div>
 
 <script>
-function tick() {
-  var now = new Date(), end = new Date(now);
-  end.setHours(23,59,59,999);
-  var d = Math.max(0, end - now);
-  document.getElementById('cd-h').textContent = String(Math.floor(d/3600000)).padStart(2,'0');
-  document.getElementById('cd-m').textContent = String(Math.floor((d%3600000)/60000)).padStart(2,'0');
-  document.getElementById('cd-s').textContent = String(Math.floor((d%60000)/1000)).padStart(2,'0');
-}
-tick(); setInterval(tick,1000);
 function copyCode() {
   navigator.clipboard.writeText('LIMITED40').then(function(){
     var b = document.querySelector('.code-copy');
