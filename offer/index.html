@@ -63,6 +63,16 @@
   .hero-btn-secondary:hover { border-color: rgba(255,255,255,0.5); }
   .hero-btn-secondary svg { color: var(--red); }
   .hero-deadline { font-size: 13px; color: var(--gray-muted); }
+
+  .availability { display: inline-flex; flex-direction: column; align-items: center; gap: 10px; background: rgba(0,0,0,0.3); border: 1px solid var(--red-border); border-radius: var(--radius); padding: 16px 22px; margin-bottom: 22px; max-width: 100%; }
+  .availability-top { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; color: #fff; text-transform: uppercase; letter-spacing: 1px; }
+  .availability-top strong { color: #fca5a5; font-weight: 800; }
+  .avail-dots { display: flex; gap: 6px; }
+  .avail-dot { width: 14px; height: 14px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 8px rgba(34,197,94,0.4); }
+  .avail-dot.taken { background: rgba(255,255,255,0.12); box-shadow: none; border: 1px solid rgba(255,255,255,0.15); position: relative; }
+  .avail-dot.taken::after { content: ''; position: absolute; inset: 3px; background: rgba(229,53,53,0.4); border-radius: 50%; }
+  .availability-sub { font-size: 12px; color: var(--gray-muted); text-align: center; }
+  @media (max-width: 480px) { .avail-dots { gap: 4px; } .avail-dot { width: 11px; height: 11px; } }
   .hero-deadline strong { color: #86efac; }
 
   .container { max-width: 920px; margin: 0 auto; padding: 0 28px; }
@@ -200,6 +210,25 @@
   <div class="hero-badge"><span class="alert-dot"></span> Limited Offer &mdash; Exclusive Savings</div>
   <h1>Professional Oven Cleaning<br><em>at Unbeatable Prices</em></h1>
   <p class="hero-sub">Book today and save big. We come to you across the Wirral, Liverpool &amp; Chester &mdash; eco-safe products, outstanding results, guaranteed.</p>
+  <div class="availability">
+    <div class="availability-top">
+      <span class="alert-dot"></span>
+      Only <strong>4 of 10</strong> slots remaining
+    </div>
+    <div class="avail-dots">
+      <span class="avail-dot taken"></span>
+      <span class="avail-dot taken"></span>
+      <span class="avail-dot taken"></span>
+      <span class="avail-dot taken"></span>
+      <span class="avail-dot taken"></span>
+      <span class="avail-dot taken"></span>
+      <span class="avail-dot"></span>
+      <span class="avail-dot"></span>
+      <span class="avail-dot"></span>
+      <span class="avail-dot"></span>
+    </div>
+    <p class="availability-sub">6 booked &bull; 4 left at this price</p>
+  </div>
   <div class="hero-actions">
     <a href="#packages" class="hero-btn-primary">See the offers</a>
     <a href="tel:+447533905509" class="hero-btn-secondary">
@@ -207,7 +236,7 @@
       +44 7533 905509
     </a>
   </div>
-  <p class="hero-deadline">Limited availability &bull; <strong>Appointments available until 31 May 2026</strong></p>
+  <p class="hero-deadline">Appointments available until 31 May 2026</p>
 </div>
 
 <section id="packages">
@@ -340,7 +369,7 @@
   <div class="container">
     <p class="section-label">Ready to book?</p>
     <h2 class="section-title">Claim Your Limited Offer</h2>
-    <p class="section-sub">Fill in the form and we'll confirm your appointment within the hour. Prefer to call? Quote <strong style="color:var(--red);">LIMITED40</strong> on <a href="tel:+447533905509" style="color:#fff;font-weight:600;">+44 7533 905509</a>.</p>
+    <p class="section-sub">Fill in the form and we'll confirm your appointment within the hour. Prefer to call? Quote <strong style="color:var(--red);">SPRING10</strong> on <a href="tel:+447533905509" style="color:#fff;font-weight:600;">+44 7533 905509</a>.</p>
 
     <div class="booking-form-wrap" id="booking-form">
       <p class="booking-form-title">Book online &mdash; we'll be in touch</p>
@@ -349,7 +378,7 @@
         <input type="hidden" name="_subject" value="Limited Offer Booking Request">
         <input type="hidden" name="_next" value="https://www.theovencleaner.co.uk/thank-you.html">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="Booking Code" value="LIMITED40">
+        <input type="hidden" name="Booking Code" value="SPRING10">
         <div class="bf-row">
           <div class="bf-field">
             <label for="bf-name">Name</label>
@@ -418,7 +447,7 @@
       <a href="tel:+447533905509">+44 7533 905509</a>
     </div>
     <p class="footer-copy">&copy; 2026 The Oven Cleaner. All rights reserved.</p>
-    <p class="fine-print">Limited offer pricing subject to availability. Quote code LIMITED40 when booking. Appointments to be completed no later than 31 May 2026. Offer cannot be combined with any other promotion or discount. Serving the Wirral, Liverpool &amp; Chester.</p>
+    <p class="fine-print">Limited offer pricing subject to availability. Quote code SPRING10 when booking. Appointments to be completed no later than 31 May 2026. Offer cannot be combined with any other promotion or discount. Serving the Wirral, Liverpool &amp; Chester.</p>
   </div>
 </footer>
 
@@ -426,7 +455,7 @@
 
 <script>
 function copyCode() {
-  navigator.clipboard.writeText('LIMITED40').then(function(){
+  navigator.clipboard.writeText('SPRING10').then(function(){
     var b = document.querySelector('.code-copy');
     b.textContent = 'Copied!';
     setTimeout(function(){ b.textContent = 'Copy code'; }, 2000);
