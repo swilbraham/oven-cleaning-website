@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Super Sunday Offer | The Oven Cleaner</title>
+<title>Limited Offer | The Oven Cleaner</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -117,6 +117,21 @@
   .btn-outline-white { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: #fff; font-weight: 600; font-size: 15px; padding: 14px 24px; border-radius: var(--radius-pill); text-decoration: none; border: 2px solid rgba(255,255,255,0.5); transition: border-color 0.2s; white-space: nowrap; }
   .btn-outline-white:hover { border-color: #fff; }
 
+  .booking-form-wrap { background: rgba(255,255,255,0.04); border: 1px solid rgba(229,53,53,0.3); border-radius: var(--radius); padding: 32px; margin-bottom: 22px; }
+  .booking-form-title { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .booking-form-sub { font-size: 13px; color: var(--gray-text); margin-bottom: 22px; }
+  .booking-form { display: grid; gap: 14px; }
+  .bf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .bf-field { display: flex; flex-direction: column; gap: 6px; }
+  .bf-field label { font-size: 12px; font-weight: 600; color: var(--gray-text); text-transform: uppercase; letter-spacing: 0.5px; }
+  .bf-field input, .bf-field select, .bf-field textarea { background: rgba(0,0,0,0.3); border: 1px solid rgba(229,53,53,0.25); border-radius: var(--radius-sm); padding: 12px 14px; color: #fff; font-family: inherit; font-size: 14px; transition: border-color 0.2s; }
+  .bf-field input:focus, .bf-field select:focus, .bf-field textarea:focus { outline: none; border-color: var(--red); }
+  .bf-field textarea { resize: vertical; min-height: 80px; }
+  .bf-field select option { background: #2d0a0a; color: #fff; }
+  .bf-submit { background: var(--red-btn); color: #fff; font-weight: 700; font-size: 15px; padding: 14px; border: none; border-radius: var(--radius-sm); cursor: pointer; font-family: inherit; transition: background 0.2s; margin-top: 6px; }
+  .bf-submit:hover { background: var(--red-btn-h); }
+  @media (max-width: 520px) { .bf-row { grid-template-columns: 1fr; } }
+
   .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
   .testi-card { background: #fff; border: 1px solid #e5e7eb; border-radius: var(--radius); padding: 26px; color: #111; }
   .testi-stars { color: #dc2626; font-size: 15px; margin-bottom: 14px; }
@@ -166,11 +181,11 @@
 
 <div class="alert-bar">
   <span class="alert-dot"></span>
-  <strong>Today only &mdash; Sunday 19 April 2026.</strong>&nbsp; Book now, appointment completed by 31 May 2026. Offer expires at midnight.
+  <strong>Limited-time offer.</strong>&nbsp; Book now to lock in today's price &mdash; appointments available until 31 May 2026.
 </div>
 
 <div class="hero">
-  <div class="hero-badge"><span class="alert-dot"></span> Super Sunday Special &mdash; One Day Only</div>
+  <div class="hero-badge"><span class="alert-dot"></span> Limited Offer &mdash; Exclusive Savings</div>
   <h1>Professional Oven Cleaning<br><em>at Unbeatable Prices</em></h1>
   <p class="hero-sub">Book today and save big. We come to you across the Wirral, Liverpool &amp; Chester &mdash; eco-safe products, outstanding results, guaranteed.</p>
   <div class="countdown-wrap">
@@ -180,14 +195,14 @@
     <span class="cd-sep">:</span>
     <div class="cd-unit"><span class="cd-num" id="cd-s">00</span><span class="cd-label">secs</span></div>
   </div>
-  <p class="hero-deadline">Offer closes midnight tonight &bull; <strong>Appointments available until 31 May 2026</strong></p>
+  <p class="hero-deadline">Limited availability &bull; <strong>Appointments available until 31 May 2026</strong></p>
 </div>
 
 <section>
   <div class="container">
     <p class="section-label">Today's prices</p>
     <h2 class="section-title">Choose Your Package</h2>
-    <p class="section-sub">Exclusive Super Sunday prices &mdash; book today and we'll come to you at a time that suits.</p>
+    <p class="section-sub">Exclusive limited offer prices &mdash; book today and we'll come to you at a time that suits.</p>
     <div class="packages">
       <div class="pkg-card">
         <div class="pkg-card-top">
@@ -197,7 +212,7 @@
         <div class="pkg-card-body">
           <div class="pkg-price-row"><span class="pkg-was">Usually &pound;55</span></div>
           <div class="pkg-now"><sup>&pound;</sup>39</div>
-          <span class="pkg-save">&#10003; Save &pound;16 &mdash; today only</span>
+          <span class="pkg-save">&#10003; Save &pound;16 &mdash; limited offer</span>
           <hr class="pkg-divider">
           <ul class="pkg-items">
             <li><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg></span>Full oven interior clean</li>
@@ -217,7 +232,7 @@
         <div class="pkg-card-body">
           <div class="pkg-price-row"><span class="pkg-was">Usually &pound;99</span></div>
           <div class="pkg-now"><sup>&pound;</sup>69</div>
-          <span class="pkg-save">&#10003; Save &pound;30 &mdash; today only</span>
+          <span class="pkg-save">&#10003; Save &pound;30 &mdash; limited offer</span>
           <hr class="pkg-divider">
           <ul class="pkg-items">
             <li><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg></span>Full oven interior &amp; door glass</li>
@@ -273,18 +288,64 @@
   <div class="container">
     <p class="section-label">How to claim</p>
     <h2 class="section-title">Secure Your Slot Today</h2>
-    <p class="section-sub">Call and quote the code below to get your Super Sunday price &mdash; lines open until 8pm.</p>
+    <p class="section-sub">Fill in the form below or call and quote the code to claim your limited offer price &mdash; lines open until 8pm.</p>
     <div class="code-row">
       <div>
         <p class="code-label">Booking code</p>
-        <p class="code-val">SUNDAY40</p>
+        <p class="code-val">LIMITED40</p>
       </div>
       <button class="code-copy" onclick="copyCode()">Copy code</button>
     </div>
+
+    <div class="booking-form-wrap">
+      <p class="booking-form-title">Book online &mdash; we'll be in touch</p>
+      <p class="booking-form-sub">Fill in your details and we'll confirm your appointment within the hour.</p>
+      <form class="booking-form" action="https://formsubmit.co/info@theovencleaner.co.uk" method="POST">
+        <input type="hidden" name="_subject" value="Limited Offer Booking Request">
+        <input type="hidden" name="_next" value="https://www.theovencleaner.co.uk/thank-you.html">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="Booking Code" value="LIMITED40">
+        <div class="bf-row">
+          <div class="bf-field">
+            <label for="bf-name">Name</label>
+            <input type="text" id="bf-name" name="name" required>
+          </div>
+          <div class="bf-field">
+            <label for="bf-phone">Phone</label>
+            <input type="tel" id="bf-phone" name="phone" required>
+          </div>
+        </div>
+        <div class="bf-row">
+          <div class="bf-field">
+            <label for="bf-email">Email</label>
+            <input type="email" id="bf-email" name="email" required>
+          </div>
+          <div class="bf-field">
+            <label for="bf-postcode">Postcode</label>
+            <input type="text" id="bf-postcode" name="postcode" required>
+          </div>
+        </div>
+        <div class="bf-field">
+          <label for="bf-package">Package</label>
+          <select id="bf-package" name="package" required>
+            <option value="">Choose a package&hellip;</option>
+            <option value="Single Oven - £39">Single Oven &ndash; &pound;39</option>
+            <option value="Oven, Hob & Extractor - £69">Oven, Hob &amp; Extractor &ndash; &pound;69</option>
+            <option value="Not sure">Not sure &mdash; please advise</option>
+          </select>
+        </div>
+        <div class="bf-field">
+          <label for="bf-notes">Preferred date / notes (optional)</label>
+          <textarea id="bf-notes" name="notes" rows="3" placeholder="e.g. weekday mornings, double oven, etc."></textarea>
+        </div>
+        <button type="submit" class="bf-submit">Claim Limited Offer &rarr;</button>
+      </form>
+    </div>
+
     <div class="cta-strip">
       <div>
         <h3>Ready to book? Call us now</h3>
-        <p>Lines open until 8pm &bull; Quote <strong>SUNDAY40</strong> when you call</p>
+        <p>Lines open until 8pm &bull; Quote <strong>LIMITED40</strong> when you call</p>
       </div>
       <div class="cta-strip-actions">
         <a href="tel:+447533905509" class="btn-white">
@@ -315,7 +376,7 @@
       </div>
       <div class="testi-card">
         <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testi-text">"Booked through the Super Sunday offer &mdash; incredible value. The whole kitchen looks amazing. Hob and extractor spotless. Could not recommend more highly."</p>
+        <p class="testi-text">"Booked through the limited offer &mdash; incredible value. The whole kitchen looks amazing. Hob and extractor spotless. Could not recommend more highly."</p>
         <div class="testi-author">
           <div class="testi-avatar">LP</div>
           <div><p class="testi-name">Linda P.</p><p class="testi-loc">Woolton, Liverpool</p></div>
@@ -346,7 +407,7 @@
       <a href="tel:+447533905509">+44 7533 905509</a>
     </div>
     <p class="footer-copy">&copy; 2026 The Oven Cleaner. All rights reserved.</p>
-    <p class="fine-print">Today-only pricing valid on bookings made on Sunday 19 April 2026 only. Quote code SUNDAY40 when booking. Appointments to be completed no later than 31 May 2026, subject to availability. Offer cannot be combined with any other promotion or discount. Serving the Wirral, Liverpool &amp; Chester.</p>
+    <p class="fine-print">Limited offer pricing subject to availability. Quote code LIMITED40 when booking. Appointments to be completed no later than 31 May 2026. Offer cannot be combined with any other promotion or discount. Serving the Wirral, Liverpool &amp; Chester.</p>
   </div>
 </footer>
 
@@ -363,7 +424,7 @@ function tick() {
 }
 tick(); setInterval(tick,1000);
 function copyCode() {
-  navigator.clipboard.writeText('SUNDAY40').then(function(){
+  navigator.clipboard.writeText('LIMITED40').then(function(){
     var b = document.querySelector('.code-copy');
     b.textContent = 'Copied!';
     setTimeout(function(){ b.textContent = 'Copy code'; }, 2000);
